@@ -61,7 +61,7 @@ jobs:
         cd auth && npm ci
         cd ../product && npm ci
         cd ../order && npm ci
-        cd ../api.gateway && npm ci
+        cd ../api-gateway && npm ci
 
     - name: Run basic health checks
       run: |
