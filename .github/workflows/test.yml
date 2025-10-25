@@ -83,11 +83,8 @@ jobs:
     - name: Setup Docker
       uses: docker/setup-buildx-action@v3
       
-    - name: Install docker-compose
+    - name: Build Docker images with docker-compose
       run: |
-        sudo apt-get update
-        sudo apt-get install -y docker-compose-plugin
-        
-    - name: Build Docker images
-      run: |
-        docker-compose build
+        # Sử dụng docker compose (V2) thay vì docker-compose
+        docker compose version
+        docker compose build
